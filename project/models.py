@@ -2,6 +2,7 @@ import datetime
 
 
 class BaseModel:
+    """Base model for all Class like Model"""
     def __init__(self):
         self.__id = None
 
@@ -160,3 +161,4 @@ class Order(BaseModel):
                 print('Данного значания не существует')
         else:
             self.__menus = []
+

@@ -1,10 +1,12 @@
 import datetime
+from serializers import Serializer
 
 
-class BaseModel:
+class BaseModel(Serializer):
     """Base model for all Class like Model"""
     def __init__(self):
         self.__id = None
+        super(BaseModel, self).__init__()
 
     @property
     def id_(self):
@@ -161,4 +163,3 @@ class Order(BaseModel):
                 print('Данного значания не существует')
         else:
             self.__menus = []
-

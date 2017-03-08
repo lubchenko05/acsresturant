@@ -1,4 +1,5 @@
 import settings
+import sqlite3
 
 
 class Id:
@@ -44,9 +45,14 @@ class Serializer:
             values += "'%s', " % v
         self.change_list[self.__id] = query[:-2]+') VALUES '+values[:-2]+');'
 
-    def get(self, id_):
-        self.change_list[self.__id] = 'select * from %s where id = %s; ' % (self, id_)
-        self.commit()
+    def get(self, id_=None):
+        # TODO: Протестировать коректность возврата коммита
+        if id_:
+            self.change_list[self.__id] = 'select * from %s where id = %s; ' % (self, id_)
+            result = self.commit()
+            if result:
+                return result[len(result)]
+        return
 
     def all(self):
         self.change_list[self.__id] = 'select * from %s;' % self
@@ -63,8 +69,19 @@ class Serializer:
         self.change_list[self.__id] = "DELETE FROM %s WHERE id='%s'" % (self, id_)
 
     def commit(self):
-        # TODO: execute change_list in DataBase
-        pass
+        # TODO: Протестировать работу коммита
+        # TODO: Протестировать коректность возврата коммита
+        # TODO: Перенести вывод ошибки в views
+        try:
+            conn = sqlite3.connect(self.db_name)
+            cursor = conn.cursor()
+            response = [cursor.execute(i).fetchall() for i in self.change_list.values()]
+            conn.commit()
+            conn.close()
+            return response[0]
+        except sqlite3.Error as e:
+            print(e)
+            return None
 
     def rollback(self):
         del self.change_list

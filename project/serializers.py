@@ -24,6 +24,7 @@ class Serializer:
 
     @property
     def change_list(self):
+        # TODO: Проверить, нужно ли делать change_list статиком
         return self.__change_list
 
     @change_list.setter
@@ -51,13 +52,15 @@ class Serializer:
         self.change_list[self.__id] = 'select * from %s;' % self
         self.commit()
 
-    def update(self):
-        # TODO: create update method that add update command to change_list
-        pass
+    def update(self, id_=None, **kwargs):
+        if id_:
+            query = "UPDATE %s SET id='%s', " % (self, id_)
+            for k, v in kwargs.items():
+                query += "%s='%s', " % (k, v)
+            self.change_list[self.__id] = query[:-2]+";"
 
-    def delete(self):
-        # TODO: create delete method that add delete command to change_list
-        pass
+    def delete(self, id_):
+        self.change_list[self.__id] = "DELETE FROM %s WHERE id='%s'" % (self, id_)
 
     def commit(self):
         # TODO: execute change_list in DataBase
@@ -69,4 +72,4 @@ class Serializer:
 if __name__ == '__main__':
     print('Тест работы serializer.py:\n')
     s = Serializer()
-    s.create(name='name', date='22-04-2016 20:40', mail='lubchenko@wdc.org.ua')
+    s.update(id_=10, name='name', date='22-04-2016 20:40', mail='lubchenko@wdc.org.ua')

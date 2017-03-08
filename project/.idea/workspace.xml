@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49dbff53-3859-4564-9ac4-aaa8a93e7606" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models.py" afterPath="$PROJECT_DIR$/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serializers.py" afterPath="$PROJECT_DIR$/serializers.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +31,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="156" column="32" lean-forward="true" selection-start-line="156" selection-start-column="32" selection-end-line="156" selection-end-column="32" />
+            <state relative-caret-position="4553">
+              <caret line="157" column="33" lean-forward="true" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -44,19 +43,19 @@
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1469">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="128">
+              <caret line="61" column="30" lean-forward="true" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1489013599153" expanded="true" signature="851:862" ph="insert into missing_value... " />
-                <marker date="1489013599153" expanded="true" signature="851:867" ph="insert into missing_value... " />
-                <marker date="1489013599153" expanded="true" signature="857:862" ph="select * fro... missing_value" />
-                <marker date="1489013599153" expanded="true" signature="1228:1256" ph="select * fro... missing_value" />
-                <marker date="1489013599153" expanded="true" signature="1228:1258" ph="select * fro... " />
-                <marker date="1489013599153" expanded="true" signature="1451:1465" ph="select * fro... missing_value" />
-                <marker date="1489013599153" expanded="true" signature="1579:1601" ph="UPDATE missi... " />
-                <marker date="1489013599153" expanded="true" signature="1828:1852" ph="DELETE FROM " />
-                <marker date="1489013599153" expanded="true" signature="1828:1856" ph="DELETE FROM " />
+                <marker date="1489014067249" expanded="true" signature="851:862" ph="insert into missing_value... " />
+                <marker date="1489014067249" expanded="true" signature="851:867" ph="insert into missing_value... " />
+                <marker date="1489014067249" expanded="true" signature="857:862" ph="select * fro... missing_value" />
+                <marker date="1489014067249" expanded="true" signature="1349:1377" ph="select * fro... missing_value" />
+                <marker date="1489014067249" expanded="true" signature="1349:1379" ph="select * fro... " />
+                <marker date="1489014067249" expanded="true" signature="1753:1767" ph="select * fro... missing_value" />
+                <marker date="1489014067249" expanded="true" signature="1948:1970" ph="UPDATE missi... " />
+                <marker date="1489014067249" expanded="true" signature="2197:2221" ph="DELETE FROM " />
+                <marker date="1489014067249" expanded="true" signature="2197:2225" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -111,8 +110,8 @@
         <option value="$PROJECT_DIR$/tests.py" />
         <option value="$PROJECT_DIR$/views.py" />
         <option value="$PROJECT_DIR$/settings.py" />
-        <option value="$PROJECT_DIR$/serializers.py" />
         <option value="$PROJECT_DIR$/models.py" />
+        <option value="$PROJECT_DIR$/serializers.py" />
       </list>
     </option>
   </component>
@@ -490,15 +489,15 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1489013599153" expanded="true" signature="851:862" ph="insert into missing_value... " />
-            <marker date="1489013599153" expanded="true" signature="851:867" ph="insert into missing_value... " />
-            <marker date="1489013599153" expanded="true" signature="857:862" ph="select * fro... missing_value" />
-            <marker date="1489013599153" expanded="true" signature="1228:1256" ph="select * fro... missing_value" />
-            <marker date="1489013599153" expanded="true" signature="1228:1258" ph="select * fro... " />
-            <marker date="1489013599153" expanded="true" signature="1451:1465" ph="select * fro... missing_value" />
-            <marker date="1489013599153" expanded="true" signature="1579:1601" ph="UPDATE missi... " />
-            <marker date="1489013599153" expanded="true" signature="1828:1852" ph="DELETE FROM " />
-            <marker date="1489013599153" expanded="true" signature="1828:1856" ph="DELETE FROM " />
+            <marker date="1489014067249" expanded="true" signature="851:862" ph="insert into missing_value... " />
+            <marker date="1489014067249" expanded="true" signature="851:867" ph="insert into missing_value... " />
+            <marker date="1489014067249" expanded="true" signature="857:862" ph="select * fro... missing_value" />
+            <marker date="1489014067249" expanded="true" signature="1349:1377" ph="select * fro... missing_value" />
+            <marker date="1489014067249" expanded="true" signature="1349:1379" ph="select * fro... " />
+            <marker date="1489014067249" expanded="true" signature="1753:1767" ph="select * fro... missing_value" />
+            <marker date="1489014067249" expanded="true" signature="1948:1970" ph="UPDATE missi... " />
+            <marker date="1489014067249" expanded="true" signature="2197:2221" ph="DELETE FROM " />
+            <marker date="1489014067249" expanded="true" signature="2197:2225" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -559,8 +558,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="156" column="32" lean-forward="true" selection-start-line="156" selection-start-column="32" selection-end-line="156" selection-end-column="32" />
+        <state relative-caret-position="4553">
+          <caret line="157" column="33" lean-forward="true" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -569,19 +568,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1469">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="128">
+          <caret line="61" column="30" lean-forward="true" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1489013599153" expanded="true" signature="851:862" ph="insert into missing_value... " />
-            <marker date="1489013599153" expanded="true" signature="851:867" ph="insert into missing_value... " />
-            <marker date="1489013599153" expanded="true" signature="857:862" ph="select * fro... missing_value" />
-            <marker date="1489013599153" expanded="true" signature="1228:1256" ph="select * fro... missing_value" />
-            <marker date="1489013599153" expanded="true" signature="1228:1258" ph="select * fro... " />
-            <marker date="1489013599153" expanded="true" signature="1451:1465" ph="select * fro... missing_value" />
-            <marker date="1489013599153" expanded="true" signature="1579:1601" ph="UPDATE missi... " />
-            <marker date="1489013599153" expanded="true" signature="1828:1852" ph="DELETE FROM " />
-            <marker date="1489013599153" expanded="true" signature="1828:1856" ph="DELETE FROM " />
+            <marker date="1489014067249" expanded="true" signature="851:862" ph="insert into missing_value... " />
+            <marker date="1489014067249" expanded="true" signature="851:867" ph="insert into missing_value... " />
+            <marker date="1489014067249" expanded="true" signature="857:862" ph="select * fro... missing_value" />
+            <marker date="1489014067249" expanded="true" signature="1349:1377" ph="select * fro... missing_value" />
+            <marker date="1489014067249" expanded="true" signature="1349:1379" ph="select * fro... " />
+            <marker date="1489014067249" expanded="true" signature="1753:1767" ph="select * fro... missing_value" />
+            <marker date="1489014067249" expanded="true" signature="1948:1970" ph="UPDATE missi... " />
+            <marker date="1489014067249" expanded="true" signature="2197:2221" ph="DELETE FROM " />
+            <marker date="1489014067249" expanded="true" signature="2197:2225" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>

@@ -47,6 +47,7 @@ class Serializer:
 
     def get(self, id_=None):
         # TODO: Протестировать коректность возврата коммита
+        # ISSUE: нужен ли тут коммит, или просто напрямую вытягивать данные с базы (больше склоняюсь к второму варианту)
         if id_:
             self.change_list[self.__id] = 'select * from %s where id = %s; ' % (self, id_)
             result = self.commit()
@@ -55,8 +56,12 @@ class Serializer:
         return
 
     def all(self):
+        # TODO: Протестировать коректность возврата коммита
+        # ISSUE: нужен ли тут коммит, или просто напрямую вытягивать данные с базы (больше склоняюсь к второму варианту)
         self.change_list[self.__id] = 'select * from %s;' % self
-        self.commit()
+        result = self.commit()
+        if result:
+            return result[len(result)]
 
     def update(self, id_=None, **kwargs):
         if id_:

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="acsresturantDB.db" uuid="95336b06-d5ec-4c4c-a264-3d9fec539fc7">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\lubch_1an8xga\Desktop\Python\acsresturant\acsresturantDB.db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="acsresturantDB.db [2]" uuid="b68ec6a1-e039-4fcd-8a52-37d08ff05865">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/acsresturantDB.db</jdbc-url>
+    </data-source>
+  </component>
+</project>

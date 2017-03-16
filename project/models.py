@@ -1,11 +1,11 @@
 import datetime
-from serializers import Serializer
+from project.serializers import Serializer
 
 
 class BaseModel(Serializer):
     """Base model for all Class like Model"""
-    def __init__(self):
-        self.__id = None
+    def __init__(self, id_=None):
+        self.__id = id_
         super(BaseModel, self).__init__()
 
     @property
@@ -108,7 +108,7 @@ class StaffFunc(BaseModel):
         super(StaffFunc, self).__init__()
 
 
-class Order(BaseModel):
+class Orders(BaseModel):
     def __init__(self, date=datetime.datetime.now(), client_full_name='', number='', is_success=False):
         self.date = date
         self.client_full_name = client_full_name
@@ -116,7 +116,7 @@ class Order(BaseModel):
         self.is_success = is_success
         self.__staff = []
         self.__menus = []
-        super(Order, self).__init__()
+        super(Orders, self).__init__()
 
     @property
     def staff(self):

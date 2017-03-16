@@ -1,5 +1,7 @@
-import settings
+import project.settings as settings
 import sqlite3
+
+# TODO: продумать многопоточность в екзекьюте
 
 
 class Serializer:
@@ -12,9 +14,9 @@ class Serializer:
 
     @property
     def change_list(self):
-        # TODO: Проверить, нужно ли делать change_list статиком
         return self.__change_list
 
+    # TODO сделать статиком
     @change_list.setter
     def change_list(self, value):
         self.__change_list.append(value)
@@ -29,27 +31,27 @@ class Serializer:
         for k, v in kwargs.items():
             query += '%s, ' % k
             values += "'%s', " % v
-        self.change_list.append(query[:-2]+') VALUES '+values[:-2]+');')
+        query = query[:-2]+') VALUES '+values[:-2]+');'
+        self.change_list.append(query)
 
-    def get(self, id_=None):
-        # TODO: Протестировать коректность возврата коммита
-        result = self.execute('select * from %s where id = %s; ' % (self, id_))
+    def get(self, id_):
+        result = self.execute(("select * from %s where id='%s'; " % (self, id_),))
         if result:
-            return result[0]
+            return result[0][0]
 
     def all(self):
         # TODO: Протестировать коректность возврата коммита
-        result = self.execute('select * from %s;' % self)
+        result = self.execute(('select * from %s;' % self,))
         # TODO: проверить как работает
         if result:
-            return result
+            return result[0]
 
     def update(self, id_=None, **kwargs):
         if id_:
-            query = "UPDATE %s SET id='%s', " % (self, id_)
+            query = "UPDATE %s SET " % (self)
             for k, v in kwargs.items():
                 query += "%s='%s', " % (k, v)
-            self.change_list.append(query[:-2]+";")
+            self.change_list.append(query[:-2]+" WHERE id='%s';" % id_)
 
     def delete(self, id_):
         self.change_list.append("DELETE FROM %s WHERE id='%s'" % (self, id_))
@@ -61,22 +63,14 @@ class Serializer:
     def rollback(self):
         del self.change_list
 
-    def execute(self, query_list):
+    def execute(self, request):
         # TODO: Протестировать коректность возврата
         # TODO: Перенести вывод ошибки в views
         try:
             conn = sqlite3.connect(self.db_name)
-            cursor = conn.cursor()
-            response = [cursor.execute(i).fetchall() for i in query_list]
+            response = [conn.execute(i).fetchall() for i in request]
             conn.commit()
             conn.close()
-            return response[0]
+            return response
         except sqlite3.Error as e:
             print(e)
-            return None
-
-if __name__ == '__main__':
-    print('Тест работы serializer.py:\n')
-    s = Serializer()
-    s.update(id_=10, name='name', date='22-04-2016 20:40', mail='lubchenko@wdc.org.ua')
-    s.delete(10)

@@ -55,9 +55,7 @@ class Serializer:
             self.execute((query[:-2] + " WHERE id='%s';" % self.id,))
 
     def delete(self):
-        if self.get(self.id):
             self.execute(('DELETE FROM %s where id="%s"' % (self, self.id),))
-        del self
 
     @classmethod
     def execute(cls, request):

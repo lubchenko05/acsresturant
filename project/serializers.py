@@ -71,6 +71,14 @@ class Serializer:
         except sqlite3.Error as e:
             print(e)
 
+
+class BaseModel(Serializer):
+    """Base model for all Class like Model"""
+    def __init__(self, id_=None):
+        super(BaseModel, self).__init__()
+        if id_:
+            self.get(id_)
+
 if __name__ == '__main__':
     item1 = models.Item.create(name='name', value="200")
     print(item1.__dict__)
